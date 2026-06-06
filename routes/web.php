@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\OrganisasiValidationController;
+use App\Http\Controllers\Organisasi\EventController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,28 +31,23 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 
-    // Route::middleware(['auth', 'organisasi.aktif'])->group(function () {
-    //     // Nanti rute pembuatan event ditaruh di sini
-    //     Route::get('/organisasi/event/create', function () {
-    //         return "Halaman Buat Event (Hanya untuk organisasi aktif)";
-    //     })->name('event.create');
-        
-    //     Route::post('/organisasi/event', function () {
-    //         // Logika simpan event
-    //     })->name('event.store');
 
-    // });
+    // Grup Khusus Organisasi yang sudah AKTIF
+    Route::middleware(['auth', 'organisasi.aktif'])->prefix('organisasi')->name('organisasi.')->group(function () {
+        
+        Route::get('/event/create', [EventController::class, 'create'])->name('event.create');
+        Route::post('/event', [EventController::class, 'store'])->name('event.store');
+
+    });
 
 
     // Grup Khusus Admin
     Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
         
-        // Rute Dashboard Admin (yang sudah ada sebelumnya)
         Route::get('/dashboard', function () {
             return view('admin.dashboard');
         })->name('dashboard');
 
-        // Rute Validasi Organisasi
         Route::get('/organisasi', [OrganisasiValidationController::class, 'index'])->name('organisasi.index');
         Route::get('/organisasi/{organisasi}', [OrganisasiValidationController::class, 'show'])->name('organisasi.show');
         Route::patch('/organisasi/{organisasi}/status', [OrganisasiValidationController::class, 'updateStatus'])->name('organisasi.update-status');

@@ -16,8 +16,6 @@ class Event extends Model
 
     public function organisasi()
     {
-        // Kita definisikan foreign key secara eksplisit jika nama tabel (organisasi_mahasiswa) 
-        // berbeda dengan nama kolom (organisasi_id)
         return $this->belongsTo(OrganisasiMahasiswa::class, 'organisasi_id');
     }
 
@@ -29,6 +27,11 @@ class Event extends Model
     public function timelines()
     {
         return $this->hasMany(TimeLine::class);
+    }
+
+    public function biayaEvents()
+    {
+        return $this->hasMany(BiayaEvent::class); 
     }
 
     public function templateSertifikat()

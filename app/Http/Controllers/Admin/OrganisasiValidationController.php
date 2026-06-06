@@ -3,17 +3,39 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Fakultas;
 use App\Models\OrganisasiMahasiswa;
 use Illuminate\Http\Request;
 
 class OrganisasiValidationController extends Controller
 {
-    public function index()
+    
+    public function index(Request $request)
     {
-        $organisasi = OrganisasiMahasiswa::with('fakultas')->latest()->paginate(10);
-        return view('admin.organisasi.index', compact('organisasi'));
-    }
+        $query = OrganisasiMahasiswa::with('fakultas')->latest();
 
+        $query->when($request->search, function ($q, $search) {
+            $q->where('nama_organisasi', 'like', "%{$search}%")
+                ->orWhere('no_organisasi', 'like', "%{$search}%");
+        });
+
+        $query->when($request->tingkat, function ($q, $tingkat) {
+            $q->where('tingkat_organisasi', $tingkat);
+        });
+
+        $query->when($request->fakultas, function ($q, $fakultas) {
+            $q->where('fakultas_id', $fakultas);
+        });
+
+        $query->when($request->status, function ($q, $status) {
+            $q->where('status', $status);
+        });
+
+        $organisasi = $query->paginate(10)->appends($request->query());
+        $fakultasList = Fakultas::all();
+
+        return view('admin.organisasi.index', compact('organisasi', 'fakultasList'));
+    }
     public function show(OrganisasiMahasiswa $organisasi)
     {
         $organisasi->load(['fakultas', 'user']);
