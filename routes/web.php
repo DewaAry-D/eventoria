@@ -35,9 +35,17 @@ Route::middleware('auth')->group(function () {
 
     // Grup Khusus Organisasi yang sudah AKTIF
     Route::middleware(['auth', 'organisasi.aktif'])->prefix('organisasi')->name('organisasi.')->group(function () {
-        
+        Route::get('/event', [EventController::class, 'index'])->name('event.index');
         Route::get('/event/create', [EventController::class, 'create'])->name('event.create');
         Route::post('/event', [EventController::class, 'store'])->name('event.store');
+
+        Route::get('/event/{event}/katalog', [EventController::class, 'katalog'])->name('event.katalog');
+        Route::get('/event/{event}/edit', [EventController::class, 'edit'])->name('event.edit');
+        Route::put('/event/{event}', [EventController::class, 'update'])->name('event.update');
+
+        Route::get('/event/{event}/sertifikat', [\App\Http\Controllers\Organisasi\SertifikatController::class, 'index'])->name('event.sertifikat');
+        Route::post('/event/{event}/sertifikat/template', [\App\Http\Controllers\Organisasi\SertifikatController::class, 'updateTemplate'])->name('event.sertifikat.template');
+        Route::post('/event/{event}/sertifikat/peserta', [\App\Http\Controllers\Organisasi\SertifikatController::class, 'importPeserta'])->name('event.sertifikat.peserta');
 
     });
 
