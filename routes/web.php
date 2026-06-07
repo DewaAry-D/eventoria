@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\EventValidationController;
 use App\Http\Controllers\Admin\OrganisasiValidationController;
 use App\Http\Controllers\Organisasi\EventController;
 use App\Http\Controllers\ProfileController;
@@ -51,6 +52,10 @@ Route::middleware('auth')->group(function () {
         Route::get('/organisasi', [OrganisasiValidationController::class, 'index'])->name('organisasi.index');
         Route::get('/organisasi/{organisasi}', [OrganisasiValidationController::class, 'show'])->name('organisasi.show');
         Route::patch('/organisasi/{organisasi}/status', [OrganisasiValidationController::class, 'updateStatus'])->name('organisasi.update-status');
+
+        Route::get('/event', [EventValidationController::class, 'index'])->name('event.index');
+        Route::get('/event/{event}', [EventValidationController::class, 'show'])->name('event.show');
+        Route::patch('/event/{event}/status', [EventValidationController::class, 'updateStatus'])->name('event.update-status');
     });
 
 });
