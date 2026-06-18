@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -139,7 +139,7 @@
                 </div>
                 <div class="bg-[#fff2f2] dark:bg-[#1D0002] relative lg:-ml-px -mb-px lg:mb-0 rounded-t-lg lg:rounded-t-none lg:rounded-r-lg aspect-[335/364] lg:aspect-auto w-full lg:w-[438px] shrink-0 overflow-hidden">
                     {{-- Laravel Logo --}}
-                    <svg class="w-full text-[#F53003] dark:text-[#F61500] transition-all translate-y-0 opacity-100 max-w-none duration-750 starting:opacity-0 motion-safe:starting:translate-y-6" viewBox="0 0 438 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    {{-- <svg class="w-full text-[#F53003] dark:text-[#F61500] transition-all translate-y-0 opacity-100 max-w-none duration-750 starting:opacity-0 motion-safe:starting:translate-y-6" viewBox="0 0 438 104" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.2036 -3H0V102.197H49.5189V86.7187H17.2036V-3Z" fill="currentColor" />
                         <path d="M110.256 41.6337C108.061 38.1275 104.945 35.3731 100.905 33.3681C96.8667 31.3647 92.8016 30.3618 88.7131 30.3618C83.4247 30.3618 78.5885 31.3389 74.201 33.2923C69.8111 35.2456 66.0474 37.928 62.9059 41.3333C59.7643 44.7401 57.3198 48.6726 55.5754 53.1293C53.8287 57.589 52.9572 62.274 52.9572 67.1813C52.9572 72.1925 53.8287 76.8995 55.5754 81.3069C57.3191 85.7173 59.7636 89.6241 62.9059 93.0293C66.0474 96.4361 69.8119 99.1155 74.201 101.069C78.5885 103.022 83.4247 103.999 88.7131 103.999C92.8016 103.999 96.8667 102.997 100.905 100.994C104.945 98.9911 108.061 96.2359 110.256 92.7282V102.195H126.563V32.1642H110.256V41.6337ZM108.76 75.7472C107.762 78.4531 106.366 80.8078 104.572 82.8112C102.776 84.8161 100.606 86.4183 98.0637 87.6206C95.5202 88.823 92.7004 89.4238 89.6103 89.4238C86.5178 89.4238 83.7252 88.823 81.2324 87.6206C78.7388 86.4183 76.5949 84.8161 74.7998 82.8112C73.004 80.8078 71.6319 78.4531 70.6856 75.7472C69.7356 73.0421 69.2644 70.1868 69.2644 67.1821C69.2644 64.1758 69.7356 61.3205 70.6856 58.6154C71.6319 55.9102 73.004 53.5571 74.7998 51.5522C76.5949 49.5495 78.738 47.9451 81.2324 46.7427C83.7252 45.5404 86.5178 44.9396 89.6103 44.9396C92.7012 44.9396 95.5202 45.5404 98.0637 46.7427C100.606 47.9451 102.776 49.5487 104.572 51.5522C106.367 53.5571 107.762 55.9102 108.76 58.6154C109.756 61.3205 110.256 64.1758 110.256 67.1821C110.256 70.1868 109.756 73.0421 108.76 75.7472Z" fill="currentColor" />
                         <path d="M242.805 41.6337C240.611 38.1275 237.494 35.3731 233.455 33.3681C229.416 31.3647 225.351 30.3618 221.262 30.3618C215.974 30.3618 211.138 31.3389 206.75 33.2923C202.36 35.2456 198.597 37.928 195.455 41.3333C192.314 44.7401 189.869 48.6726 188.125 53.1293C186.378 57.589 185.507 62.274 185.507 67.1813C185.507 72.1925 186.378 76.8995 188.125 81.3069C189.868 85.7173 192.313 89.6241 195.455 93.0293C198.597 96.4361 202.361 99.1155 206.75 101.069C211.138 103.022 215.974 103.999 221.262 103.999C225.351 103.999 229.416 102.997 233.455 100.994C237.494 98.9911 240.611 96.2359 242.805 92.7282V102.195H259.112V32.1642H242.805V41.6337ZM241.31 75.7472C240.312 78.4531 238.916 80.8078 237.122 82.8112C235.326 84.8161 233.156 86.4183 230.614 87.6206C228.07 88.823 225.251 89.4238 222.16 89.4238C219.068 89.4238 216.275 88.823 213.782 87.6206C211.289 86.4183 209.145 84.8161 207.35 82.8112C205.554 80.8078 204.182 78.4531 203.236 75.7472C202.286 73.0421 201.814 70.1868 201.814 67.1821C201.814 64.1758 202.286 61.3205 203.236 58.6154C204.182 55.9102 205.554 53.5571 207.35 51.5522C209.145 49.5495 211.288 47.9451 213.782 46.7427C216.275 45.5404 219.068 44.9396 222.16 44.9396C225.251 44.9396 228.07 45.5404 230.614 46.7427C233.156 47.9451 235.326 49.5487 237.122 51.5522C238.917 53.5571 240.312 55.9102 241.31 58.6154C242.306 61.3205 242.806 64.1758 242.806 67.1821C242.805 70.1868 242.305 73.0421 241.31 75.7472Z" fill="currentColor" />
@@ -149,7 +149,6 @@
                         <path d="M376.571 30.3656C356.603 30.3656 340.797 46.8497 340.797 67.1828C340.797 89.6597 356.094 104 378.661 104C391.29 104 399.354 99.1488 409.206 88.5848L398.189 80.0226C398.183 80.031 389.874 90.9895 377.468 90.9895C363.048 90.9895 356.977 79.3111 356.977 73.269H411.075C413.917 50.1328 398.775 30.3656 376.571 30.3656ZM357.02 61.0967C357.145 59.7487 359.023 43.3761 376.442 43.3761C393.861 43.3761 395.978 59.7464 396.099 61.0967H357.02Z" fill="currentColor" />
                     </svg>
 
-                    {{-- 13 --}}
                     <svg class="w-[438px] max-w-none relative -mt-[6.6rem] -ml-8 lg:ml-0 [--stroke-color:#1B1B18] dark:[--stroke-color:#FF750F]" viewBox="0 0 440 392" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g class="mix-blend-darken dark:mix-blend-normal transition-all delay-300 opacity-100 duration-750 starting:opacity-0 text-[#1B1B18] dark:text-black">
                             <mask id="path-1-mask" maskUnits="userSpaceOnUse" x="-0.328613" y="103" width="338" height="299" fill="black">
@@ -220,4 +219,805 @@
             <div class="h-14.5 hidden lg:block"></div>
         @endif
     </body>
+</html> --}} 
+
+<?php
+// Eventoria - Campus Event Management Platform
+// Data dummy (bisa diganti dengan data dari database)
+
+$stats = [
+    ['value' => '1.200+', 'label' => 'Total Event'],
+    ['value' => '85+',    'label' => 'Total Organisasi'],
+    ['value' => '10k+',   'label' => 'Total Mahasiswa'],
+];
+
+$categories = [
+    ['icon' => 'graduation-cap', 'label' => 'Seminar'],
+    ['icon' => 'desktop',        'label' => 'Workshop'],
+    ['icon' => 'trophy',         'label' => 'Kompetisi'],
+    ['icon' => 'palette',        'label' => 'Seni'],
+];
+
+$events = [
+    [
+        'title'  => 'Inovasi Teknologi 2026',
+        'date'   => '24 Oktober 2026',
+        'org'    => 'Himpunan Mahasiswa Informatika',
+        'image'  => 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80',
+        'status' => 'Sudah ACC',
+    ],
+    [
+        'title'  => 'Workshop UI/UX Design',
+        'date'   => '28 Oktober 2026',
+        'org'    => 'Creative Design Club',
+        'image'  => 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80',
+        'status' => 'Sudah ACC',
+    ],
+    [
+        'title'  => 'Festival Seni Budaya',
+        'date'   => '05 November 2026',
+        'org'    => 'UKM Kesenian Mahasiswa',
+        'image'  => 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&q=80',
+        'status' => 'Sudah ACC',
+    ],
+];
+
+$footer_links = [
+    'LAYANAN'     => ['Cari Event', 'Pendaftaran Organisasi', 'Sistem Penilaian'],
+    'ORGANISASI'  => ['Tentang Kami', 'Kontak', 'Panduan'],
+    'BANTUAN'     => ['FAQ', 'Pusat Bantuan', 'Kebijakan Privasi'],
+];
+?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventoria – Temukan Event Campus Terbaik</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* ── Reset & Base ───────────────────────────────────── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --navy:        #0D1B5E;
+            --navy-light:  #1a2d8a;
+            --blue-mid:    #2563EB;
+            --accent:      #3B4FD4;
+            --bg:          #F4F6FB;
+            --white:       #FFFFFF;
+            --text-dark:   #0D1B5E;
+            --text-body:   #4A5568;
+            --text-muted:  #718096;
+            --border:      #E2E8F0;
+            --badge-green: #10B981;
+            --radius-card: 14px;
+            --radius-btn:  8px;
+            --shadow-sm:   0 1px 4px rgba(13,27,94,.08);
+            --shadow-md:   0 4px 16px rgba(13,27,94,.12);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--white);
+            color: var(--text-body);
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        img { display: block; max-width: 100%; }
+
+        a { text-decoration: none; color: inherit; }
+
+        /* ── Utility ────────────────────────────────────────── */
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin-inline: auto;
+            padding-inline: 24px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 13px 28px;
+            border-radius: var(--radius-btn);
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: background .2s, color .2s, transform .15s, box-shadow .2s;
+            white-space: nowrap;
+        }
+        .btn:hover { transform: translateY(-1px); }
+        .btn-primary {
+            background: var(--navy);
+            color: var(--white);
+            border-color: var(--navy);
+        }
+        .btn-primary:hover { background: var(--navy-light); border-color: var(--navy-light); }
+        .btn-outline {
+            background: transparent;
+            color: var(--navy);
+            border-color: var(--navy);
+        }
+        .btn-outline:hover { background: var(--navy); color: var(--white); }
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border-color: var(--white);
+        }
+        .btn-outline-white:hover { background: var(--white); color: var(--navy); }
+        .btn-white {
+            background: var(--white);
+            color: var(--navy);
+            border-color: var(--white);
+        }
+        .btn-white:hover { background: #eef0f8; }
+
+        /* ── Navbar ─────────────────────────────────────────── */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding-block: 14px;
+        }
+        .navbar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        .nav-brand {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--navy);
+            letter-spacing: -.5px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-muted);
+            font-size: 14px;
+            padding-bottom: 2px;
+            border-bottom: 2px solid transparent;
+            transition: color .2s, border-color .2s;
+        }
+        .nav-links a.active,
+        .nav-links a:hover {
+            color: var(--navy);
+            border-bottom-color: var(--navy);
+        }
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        .nav-icon {
+            color: var(--text-muted);
+            font-size: 17px;
+            cursor: pointer;
+            transition: color .2s;
+        }
+        .nav-icon:hover { color: var(--navy); }
+        .nav-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--border);
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+        }
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--navy);
+            border-radius: 2px;
+            transition: transform .3s, opacity .3s;
+        }
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            padding: 16px 24px;
+            gap: 12px;
+        }
+        .mobile-menu a {
+            font-weight: 500;
+            color: var(--text-body);
+            padding-block: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+        .mobile-menu.open { display: flex; }
+
+        /* ── Hero ───────────────────────────────────────────── */
+        .hero {
+            background: var(--bg);
+            padding-block: 80px 64px;
+            text-align: center;
+        }
+        .hero-eyebrow {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: clamp(32px, 5.5vw, 56px);
+            font-weight: 900;
+            color: var(--navy);
+            line-height: 1.15;
+            max-width: 700px;
+            margin-inline: auto;
+            margin-bottom: 20px;
+            letter-spacing: -.5px;
+        }
+        .hero p {
+            max-width: 520px;
+            margin-inline: auto;
+            color: var(--text-muted);
+            font-size: 16px;
+            margin-bottom: 36px;
+        }
+        .hero-cta {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            max-width: 560px;
+            margin-inline: auto;
+            background: var(--white);
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            padding: 6px 6px 6px 16px;
+            box-shadow: var(--shadow-sm);
+            gap: 10px;
+        }
+        .search-bar i { color: var(--text-muted); flex-shrink: 0; }
+        .search-bar input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: var(--text-dark);
+            background: transparent;
+            min-width: 0;
+        }
+        .search-bar input::placeholder { color: var(--text-muted); }
+        .btn-search {
+            background: var(--navy);
+            color: var(--white);
+            border: none;
+            border-radius: 7px;
+            padding: 11px 22px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: background .2s;
+        }
+        .btn-search:hover { background: var(--navy-light); }
+
+        /* ── Stats ──────────────────────────────────────────── */
+        .stats {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding-block: 48px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 900;
+            color: var(--navy);
+            letter-spacing: -.5px;
+        }
+        .stat-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        /* ── Section header ─────────────────────────────────── */
+        .section { padding-block: 64px; }
+        .section-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 28px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .section-title {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--navy);
+        }
+        .section-subtitle {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+        .link-all {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--navy);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: gap .2s;
+        }
+        .link-all:hover { gap: 9px; }
+
+        /* ── Categories ─────────────────────────────────────── */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .category-card {
+            background: var(--white);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-card);
+            padding: 24px 20px;
+            cursor: pointer;
+            transition: border-color .2s, box-shadow .2s, transform .2s;
+        }
+        .category-card:hover {
+            border-color: var(--navy);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .category-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: #EEF2FF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 14px;
+            color: var(--navy);
+            font-size: 18px;
+        }
+        .category-label {
+            font-weight: 700;
+            color: var(--navy);
+            font-size: 15px;
+        }
+
+        /* ── Event Cards ────────────────────────────────────── */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .event-card {
+            background: var(--white);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-card);
+            overflow: hidden;
+            transition: box-shadow .2s, transform .2s;
+        }
+        .event-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-3px);
+        }
+        .event-thumb {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+        .event-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .4s;
+        }
+        .event-card:hover .event-thumb img { transform: scale(1.04); }
+        .badge-acc {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: var(--white);
+            color: var(--badge-green);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0 2px 6px rgba(0,0,0,.12);
+        }
+        .badge-acc i { font-size: 10px; }
+        .event-body { padding: 18px; }
+        .event-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 10px;
+            line-height: 1.35;
+        }
+        .event-meta {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 12.5px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+        .event-meta i { color: var(--accent); width: 14px; }
+        .btn-detail {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: #EEF2FF;
+            color: var(--navy);
+            border: none;
+            border-radius: 7px;
+            padding: 10px;
+            font-weight: 600;
+            font-size: 13.5px;
+            cursor: pointer;
+            margin-top: 14px;
+            transition: background .2s, color .2s;
+        }
+        .btn-detail:hover { background: var(--navy); color: var(--white); }
+
+        /* ── CTA Banner ─────────────────────────────────────── */
+        .cta-banner {
+            background: var(--navy);
+            border-radius: 20px;
+            padding: 64px 40px;
+            text-align: center;
+            margin-block: 0 64px;
+        }
+        .cta-banner h2 {
+            font-size: clamp(24px, 3.5vw, 36px);
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 14px;
+            letter-spacing: -.3px;
+        }
+        .cta-banner p {
+            color: rgba(255,255,255,.7);
+            max-width: 420px;
+            margin-inline: auto;
+            margin-bottom: 32px;
+            font-size: 15px;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ── Footer ─────────────────────────────────────────── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding-block: 56px 32px;
+            background: var(--white);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.8fr repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+        .footer-brand-name {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+        .footer-brand-desc {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            line-height: 1.65;
+            max-width: 220px;
+        }
+        .footer-col-title {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .footer-col a {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            transition: color .2s;
+        }
+        .footer-col a:hover { color: var(--navy); }
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 12.5px;
+            color: var(--text-muted);
+        }
+
+        /* ── Responsive ─────────────────────────────────────── */
+        @media (max-width: 960px) {
+            .categories-grid { grid-template-columns: repeat(2, 1fr); }
+            .events-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-brand-desc { max-width: 100%; }
+        }
+
+        @media (max-width: 700px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .hero { padding-block: 56px 48px; }
+            .stats-grid { grid-template-columns: 1fr; gap: 32px; }
+            .stats-grid .stat-item + .stat-item { border-top: 1px solid var(--border); padding-top: 28px; }
+            .categories-grid { grid-template-columns: repeat(2, 1fr); }
+            .events-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .cta-banner { padding: 48px 24px; border-radius: 14px; }
+            .section { padding-block: 48px; }
+        }
+
+        @media (max-width: 400px) {
+            .categories-grid { grid-template-columns: 1fr 1fr; }
+            .hero h1 { font-size: 28px; }
+            .btn { padding: 11px 20px; font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ── Navbar ──────────────────────────────────────────── -->
+<header class="navbar">
+    <div class="container">
+        <nav class="navbar-inner">
+            <a href="#" class="nav-brand">Eventoria</a>
+
+            <ul class="nav-links">
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="{{ route('login') }}">Login</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <i class="fa-regular fa-bell nav-icon"></i>
+                <i class="fa-solid fa-gear nav-icon"></i>
+                
+                <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#">Dashboard</a>
+        <a href="#">Events</a>
+        <a href="#">Profil</a>
+    </div>
+</header>
+
+<!-- ── Hero ────────────────────────────────────────────── -->
+<section class="hero">
+    <div class="container">
+        <span class="hero-eyebrow">Platform Event Kampus #1</span>
+        <h1>Temukan Event Campus Terbaik dengan Mudah</h1>
+        <p>Platform manajemen event modern untuk mahasiswa dan organisasi kampus. Kelola, cari, dan ikuti berbagai kegiatan akademik serta kreatif dalam satu tempat.</p>
+
+        <div class="hero-cta">
+            <a href="#events" class="btn btn-primary">
+                <i class="fa-solid fa-compass"></i> Jelajahi Event
+            </a>
+            <a href="" class="btn btn-outline">
+                <i class="fa-solid fa-building-columns"></i> Daftar Organisasi
+            </a>
+        </div>
+
+        <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Cari nama event, organisasi, atau topik...">
+            <button class="btn-search">Cari Sekarang</button>
+        </div>
+    </div>
+</section>
+
+<!-- ── Stats ───────────────────────────────────────────── -->
+<section class="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <?php foreach ($stats as $s): ?>
+            <div class="stat-item">
+                <div class="stat-value"><?= htmlspecialchars($s['value']) ?></div>
+                <div class="stat-label"><?= htmlspecialchars($s['label']) ?></div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
+<!-- ── Kategori ─────────────────────────────────────────── -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <div>
+                <h2 class="section-title">Kategori Event Populer</h2>
+            </div>
+        </div>
+        <div class="categories-grid">
+            <?php
+            $icons = [
+                'graduation-cap' => 'fa-graduation-cap',
+                'desktop'        => 'fa-desktop',
+                'trophy'         => 'fa-trophy',
+                'palette'        => 'fa-palette',
+            ];
+            foreach ($categories as $cat):
+            ?>
+            <div class="category-card">
+                <div class="category-icon">
+                    <i class="fa-solid <?= $icons[$cat['icon']] ?>"></i>
+                </div>
+                <div class="category-label"><?= htmlspecialchars($cat['label']) ?></div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
+<!-- ── Events Terbaru ───────────────────────────────────── -->
+<section class="section" id="events" style="padding-top: 0;">
+    <div class="container">
+        <div class="section-header">
+            <div>
+                <h2 class="section-title">Event Terbaru</h2>
+                <p class="section-subtitle">Kegiatan kampus yang telah diverifikasi dan siap diikuti.</p>
+            </div>
+            <a href="#" class="link-all">Lihat Semua Event <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="events-grid">
+            <?php foreach ($events as $event): ?>
+            <article class="event-card">
+                <div class="event-thumb">
+                    <img src="<?= htmlspecialchars($event['image']) ?>"
+                         alt="<?= htmlspecialchars($event['title']) ?>"
+                         loading="lazy">
+                    <span class="badge-acc">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <?= htmlspecialchars($event['status']) ?>
+                    </span>
+                </div>
+                <div class="event-body">
+                    <h3 class="event-title"><?= htmlspecialchars($event['title']) ?></h3>
+                    <div class="event-meta">
+                        <i class="fa-regular fa-calendar"></i>
+                        <?= htmlspecialchars($event['date']) ?>
+                    </div>
+                    <div class="event-meta">
+                        <i class="fa-solid fa-users"></i>
+                        <?= htmlspecialchars($event['org']) ?>
+                    </div>
+                    <button class="btn-detail">Lihat Detail</button>
+                </div>
+            </article>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
+<!-- ── CTA Banner ───────────────────────────────────────── -->
+<div class="container">
+    <div class="cta-banner">
+        <h2>Siap Memulai Event Pertamamu?</h2>
+        <p>Bergabunglah dengan ribuan mahasiswa lainnya dan jadikan kegiatan kampusmu lebih terorganisir dan berkesan.</p>
+        <div class="cta-buttons">
+            <a href="{{ route('register') }}" class="btn btn-white">Daftar Sekarang</a>
+            <a href="#" class="btn btn-outline-white">Pelajari Lebih Lanjut</a>
+        </div>
+    </div>
+</div>
+
+<!-- ── Footer ───────────────────────────────────────────── -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-brand-name">Eventoria</div>
+                <p class="footer-brand-desc">
+                    Solusi manajemen event kampus paling terpercaya untuk efisiensi akademik.
+                </p>
+            </div>
+
+            <?php foreach ($footer_links as $title => $links): ?>
+            <div class="footer-col">
+                <div class="footer-col-title"><?= htmlspecialchars($title) ?></div>
+                <ul>
+                    <?php foreach ($links as $link): ?>
+                    <li><a href="#"><?= htmlspecialchars($link) ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+            <?php endforeach; ?>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; <?= date('Y') ?> Eventoria Academic Management. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<!-- ── Scripts ──────────────────────────────────────────── -->
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+    });
+
+    // Keyboard accessibility for hamburger
+    hamburger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            mobileMenu.classList.toggle('open');
+        }
+    });
+
+    // Close mobile menu when a link is clicked
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    });
+
+    // Smooth active link highlighting on scroll (optional enhancement)
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(sec => {
+            if (window.scrollY >= sec.offsetTop - 80) current = sec.id;
+        });
+    }, { passive: true });
+</script>
+
+</body>
 </html>
+
