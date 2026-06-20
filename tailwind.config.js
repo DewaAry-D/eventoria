@@ -10,10 +10,6 @@ export default {
     ],
     theme: {
         extend: {
-            fontFamily: {
-                sans: ["Inter", ...defaultTheme.fontFamily.sans],
-            },
-
             colors: {
                 // Surface
                 surface: "#fbf8ff",

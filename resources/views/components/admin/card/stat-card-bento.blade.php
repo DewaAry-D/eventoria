@@ -1,52 +1,69 @@
 @props([
-    'title',
     'value',
-    'badge' => null,
-    'badgeType' => 'success', // 'success', 'error', 'neutral'
-    'iconType' => 'primary'   // 'primary', 'secondary', 'error', 'info'
+    'title',
+    'badgeText' => null,
+    'badgeType' => 'neutral', // success, error, neutral
+    'iconBg' => 'neutral'      // primary, success, error, neutral
 ])
 
-<div class="bg-surface-container-lowest p-sm sm:p-md rounded-xl shadow-card border border-outline-variant/30 flex flex-row sm:flex-col items-center sm:items-start justify-between sm:justify-start w-full gap-sm sm:gap-0 transition-all">
+<div class="bg-surface-container-lowest p-md sm:p-lg rounded-xl border border-outline-variant/30 flex flex-row sm:flex-col justify-between items-center sm:items-start w-full min-h-[5.5rem] sm:min-h-[11rem] shadow-card hover:shadow-md hover:-translate-y-1 transition-all duration-300 ease-out group select-none">
     
-    <div class="flex sm:flex-row items-center justify-between sm:w-full shrink-0">
-        <div class="p-2 sm:p-sm rounded-md
-            {{ $iconType === 'primary' ? 'bg-primary/5 text-primary' : '' }}
-            {{ $iconType === 'secondary' ? 'bg-secondary-container/50 text-on-secondary-container' : '' }}
-            {{ $iconType === 'error' ? 'bg-error/5 text-error' : '' }}
-            {{ $iconType === 'info' ? 'bg-primary-fixed text-on-primary-fixed-variant' : '' }}
+    <div class="flex items-center sm:justify-between sm:items-start sm:w-full gap-md sm:gap-0">
+        <div class="p-sm rounded-xl shrink-0 transition-transform duration-300 group-hover:scale-105
+            {{ $iconBg === 'primary' ? 'bg-primary/5 text-primary' : '' }}
+            {{ $iconBg === 'success' ? 'bg-success/10 text-success' : '' }}
+            {{ $iconBg === 'error' ? 'bg-error-container/40 text-error' : '' }}
+            {{ $iconBg === 'neutral' ? 'bg-surface-container text-secondary' : '' }}
         ">
-            {{ $icon }}
+            <div class="w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center [&>svg]:w-full [&>svg]:h-full">
+                {{ $icon }}
+            </div>
         </div>
 
-        @if($badge)
-            <span class="hidden sm:inline-flex text-label-md px-sm py-1 rounded-full font-bold items-center gap-xs
+        <div class="flex flex-col sm:hidden">
+            <p class="text-[11px] font-bold text-on-surface-variant/50 uppercase tracking-wider leading-none mb-1">
+                {{ $title }}
+            </p>
+            <p class="text-2xl font-bold text-on-surface tracking-tight leading-none">
+                {{ $value }}
+            </p>
+        </div>
+
+        @if($badgeText)
+            <span class="hidden sm:inline-flex text-label-md px-sm py-1 rounded-full font-bold items-center gap-xs tracking-wide shrink-0
                 {{ $badgeType === 'success' ? 'bg-success/10 text-success' : '' }}
                 {{ $badgeType === 'error' ? 'bg-error-container text-on-error-container' : '' }}
-                {{ $badgeType === 'neutral' ? 'bg-surface-container-high text-on-surface-variant' : '' }}
+                {{ $badgeType === 'neutral' ? 'bg-surface-container-low text-on-secondary-container' : '' }}
             ">
-                @if($badgeType === 'success')
-                    <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+                @if(isset($badgeIcon))
+                    {{ $badgeIcon }}
                 @endif
-                {{ $badge }}
+                <span>{{ $badgeText }}</span>
             </span>
         @endif
     </div>
 
-    <div class="flex-1 min-w-0 sm:mt-xl px-xs sm:px-0">
-        <p class="text-2xl sm:text-headline-lg sm:font-bold font-bold text-on-surface tracking-tight leading-none">{{ $value }}</p>
-        <p class="text-body-md text-on-surface-variant font-medium mt-1 sm:mt-sm truncate sm:whitespace-normal leading-tight">{{ $title }}</p>
-    </div>
-
-    @if($badge)
-        <div class="sm:hidden shrink-0">
-            <span class="text-label-md px-sm py-1 rounded-full font-bold inline-flex items-center gap-xs
+    <div class="mt-0 sm:mt-xl flex flex-col items-end sm:items-start justify-center sm:justify-end shrink-0">
+        
+        @if($badgeText)
+            <span class="inline-flex sm:hidden text-[10px] px-2 py-0.5 rounded-full font-bold items-center gap-[2px] tracking-wide mb-1
                 {{ $badgeType === 'success' ? 'bg-success/10 text-success' : '' }}
                 {{ $badgeType === 'error' ? 'bg-error-container text-on-error-container' : '' }}
-                {{ $badgeType === 'neutral' ? 'bg-surface-container-high text-on-surface-variant' : '' }}
+                {{ $badgeType === 'neutral' ? 'bg-surface-container-low text-on-secondary-container' : '' }}
             ">
-                {{ $badge }}
+                @if(isset($badgeIcon))
+                    <div class="scale-90 flex items-center justify-center">{{ $badgeIcon }}</div>
+                @endif
+                <span>{{ $badgeText }}</span>
             </span>
-        </div>
-    @endif
+        @endif
+
+        <p class="hidden sm:block text-display-lg font-bold text-on-surface tracking-tight leading-none transition-colors duration-300 group-hover:text-primary">
+            {{ $value }}
+        </p>
+        <p class="hidden sm:block text-body-md font-medium text-secondary/80 tracking-wide mt-sm leading-none">
+            {{ $title }}
+        </p>
+    </div>
 
 </div>
